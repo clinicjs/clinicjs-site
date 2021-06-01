@@ -18,6 +18,10 @@ const navLinks = [
   {
     href: '/terms',
     children: 'Terms & Conditions'
+  },
+  {
+    href: 'https://www.netlify.com',
+    children: 'This site is powered by Netlify'
   }
 ]
 
