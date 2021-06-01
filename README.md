@@ -8,6 +8,8 @@
 
 # Clinic.js Website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1cc44e01-a24f-4cb3-b38b-899f304651c7/deploy-status)](https://app.netlify.com/sites/vigorous-turing-f48ff5/deploys)
+
 <details>
   <summary>Table of contents</summary>
 <!-- MarkdownTOC autolink="true" levels="1,2,3,4" -->
