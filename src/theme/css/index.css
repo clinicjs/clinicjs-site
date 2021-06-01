@@ -1,0 +1,270 @@
+/* Scaffolding */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #2165E5;
+  color: #4C4C5C;
+  font-size: 16px;
+  font-family: Archia, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  border: 0;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+table {
+  margin: 1.5rem 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 2rem;
+  font-family: Campton, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+  font-variant-ligatures: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+h5,
+h6 {
+  font-size: 1rem;
+}
+
+p,
+ul,
+ol {
+  line-height: 1.5;
+}
+
+ul,
+ol {
+  padding-left: 1.5rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 a,
+a h1,
+h2 a,
+a h2,
+h3 a,
+a h3,
+h4 a,
+a h4,
+h5 a,
+a h5,
+h6 a ,
+a h6 {
+  color: #2165E5;
+}
+
+p a,
+ul a,
+ol a,
+table a,
+hr a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+hr {
+  margin: 2rem 0;
+  border-top: solid #EFF2F8 1px;
+  border-bottom: 0;
+}
+
+pre,
+code {
+  font-family: 'Space Mono', monospace;
+  font-size: inherit;
+  text-align: left;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  tab-size: 2;
+  hyphens: none;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+pre {
+  white-space: pre;
+  line-height: 1.75;
+}
+
+code {
+  display: inline-block;
+  padding: 0 .4em;
+  white-space: normal;
+}
+
+h1[id],
+h2[id],
+h3[id],
+h4[id],
+h5[id],
+h6[id] {
+  padding-top: 1rem;
+}
+
+[data-offset] {
+  padding-top: 5.5rem;
+  margin-top: -5.5rem;
+  margin-bottom: -1.5rem;
+}
+
+.gatsby-highlight pre {
+  padding: 1em;
+  margin: 0.75rem 0;
+  overflow: auto;
+  background-color: #262F3F;
+  color: #f8f8f2;
+}
+
+.gatsby-highlight code {
+  white-space: pre;
+  color: inherit;
+  background-color: transparent;
+}
+
+/* HubSpot forms */
+.hs-form-field,
+.hs_error_rollup {
+  margin-bottom: 1rem;
+}
+
+.hs-form label {
+  display: none;
+}
+
+.hs-error-msgs {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  padding-top: 1em;
+  font-size: 0.75rem;
+}
+
+.hs-error-msgs label {
+  display: block;
+}
+
+.hs_error_rollup .hs-error-msgs {
+  padding-top: 0;
+}
+
+.hs-form input[type="text"],
+.hs-form input[type="number"],
+.hs-form input[type="email"],
+.hs-form input[type="tel"],
+.hs-form input[type="submit"],
+.hs-form textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #4C4C4C;
+  background-color: transparent;
+  border: solid 1px #C4C4C4;
+  border-radius: 4px;
+}
+
+.hs-form input[type="submit"] {
+  width: auto;
+  color: #2165E5;
+  border-color: #2165E5;
+  font-weight: bold;
+}
+
+.hs-form input[type="text"]::-webkit-input-placeholder,
+.hs-form input[type="text"]::-moz-placeholder,
+.hs-form input[type="number"]::-webkit-input-placeholder,
+.hs-form input[type="number"]::-moz-placeholder,
+.hs-form input[type="email"]::-webkit-input-placeholder,
+.hs-form input[type="email"]::-moz-placeholder,
+.hs-form input[type="tel"]::-webkit-input-placeholder,
+.hs-form input[type="tel"]::-moz-placeholder,
+.hs-form textarea::-webkit-input-placeholder,
+.hs-form textarea::-moz-placeholder {
+  color: #C4C4C4;
+}
+
+.hs-form input:focus {
+  border-color: #999;
+}
+
+.hs-form input.invalid {
+  border-color: #C32424;
+}
+
+.hs-form input[type="submit"]:focus {
+  background-color: rgb(33, 101, 229, 0.1);
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h1[id],
+  h2[id],
+  h3[id],
+  h4[id],
+  h5[id],
+  h6[id] {
+    padding-top: 1rem;
+  }
+
+  [data-offset] {
+    padding-top: 6rem;
+    margin-top: -6rem;
+  }
+}

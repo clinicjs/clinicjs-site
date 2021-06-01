@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700');
+
+@font-face {
+  font-family: 'Archia';
+  src: url('../fonts/archia-regular.woff2') format('woff2'),
+    url('../fonts/archia-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Archia';
+  src: url('../fonts/archia-semibold.woff2') format('woff2'),
+    url('../fonts/archia-semibold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Campton';
+  src: url('../fonts/campton-bold.woff2') format('woff2'),
+    url('../fonts/campton-bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
