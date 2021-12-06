@@ -46,6 +46,15 @@
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
+    "@aws-cdk/aws-certificatemanager": "^1.134.0",
+    "@aws-cdk/aws-cloudfront": "^1.134.0",
+    "@aws-cdk/aws-cloudwatch": "^1.134.0",
+    "@aws-cdk/aws-route53": "^1.134.0",
+    "@aws-cdk/aws-route53-targets": "^1.134.0",
+    "@aws-cdk/aws-s3": "^1.134.0",
+    "@aws-cdk/aws-s3-deployment": "^1.134.0",
+    "@aws-cdk/core": "^1.133.0",
+    "aws-cdk": "^1.133.0",
     "babel-eslint": "^10.0.3",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "cli-glob": "^0.1.0",
@@ -74,6 +83,8 @@
     "write-good": "write-good $(glob 'content/**/*.md')",
     "format:js": "prettier '**/*.js' --write",
     "format:md": "prettier 'content/**/*.md' --write",
-    "format": "npm run format:js && npm run format:md"
+    "format": "npm run format:js && npm run format:md",
+    "cdk:deploy": "cdk deploy --require-approval never",
+    "cdk:bootstrap": "cdk bootstrap"
   }
 }

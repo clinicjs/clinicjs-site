@@ -4,7 +4,7 @@ const config = require('./SiteConfig')
 module.exports = {
   // Default <title />
   title:
-    'Clinic.js - An Open Source Node.js performance profiling suite',
+    'Clinic.js - An Open Source Node.js performance profiling suite by NearForm',
   // Appended to the end of all custom titles (with - separator)
   titleSuffix: 'Clinic.js',
   // Programatically creates <meta name="KEY" content="VALUE" /> by iterating through object
@@ -27,12 +27,12 @@ module.exports = {
     {
       name: 'twitter:title',
       content:
-        'Clinic.js - An Open Source Node.js performance profiling suite'
+        'Clinic.js - An Open Source Node.js performance profiling suite by NearForm'
     },
     {
       property: 'og:title',
       content:
-        'Clinic.js - An Open Source Node.js performance profiling suite'
+        'Clinic.js - An Open Source Node.js performance profiling suite by NearForm'
     },
     {
       name: 'twitter:card',
@@ -40,11 +40,11 @@ module.exports = {
     },
     {
       name: 'twitter:creator',
-      content: '@nodeclinic'
+      content: '@NearForm'
     },
     {
       name: 'twitter:site',
-      content: '@nodeclinic'
+      content: '@NearForm'
     },
     {
       property: 'og:image',

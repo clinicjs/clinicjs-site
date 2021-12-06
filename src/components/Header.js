@@ -22,6 +22,10 @@ const navLinks = [
     children: 'Bubbleprof'
   },
   {
+    to: '/heapprofiler/',
+    children: 'Heap Profiler'
+  },
+  {
     to: '/blog/',
     children: 'Blog'
   },

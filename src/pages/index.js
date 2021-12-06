@@ -92,7 +92,7 @@ export const pageQuery = graphql`
       }
     }
     tools: allMarkdownRemark(
-      limit: 3
+      limit: 4
       filter: { frontmatter: { template: { eq: "tool"} } }
       sort: { fields: [frontmatter___priority], order: ASC }
     ) {

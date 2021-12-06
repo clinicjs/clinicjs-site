@@ -63,6 +63,7 @@ For information on the clinic sub-commands, use the --help option:
   clinic bubbleprof --help
   clinic clean --help
   clinic flame --help
+  clinic heapprofiler --help
 
 Flags
 -h | --help                Display Help
