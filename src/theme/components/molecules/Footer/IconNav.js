@@ -11,7 +11,7 @@ const IconNavList = styled(NavList)`
   }
 `
 
-const IconNav = ({ netlifyUrl, gitHubUrl, rssUrl }) => (
+const IconNav = ({ gitHubUrl, rssUrl }) => (
   <nav>
     <IconNavList>
       <li>

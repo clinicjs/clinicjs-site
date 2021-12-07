@@ -8,8 +8,6 @@
 
 # Clinic.js Website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/1cc44e01-a24f-4cb3-b38b-899f304651c7/deploy-status)](https://app.netlify.com/sites/vigorous-turing-f48ff5/deploys)
-
 <details>
   <summary>Table of contents</summary>
 <!-- MarkdownTOC autolink="true" levels="1,2,3,4" -->
@@ -97,12 +95,20 @@ You should now be able to see the website at [http://localhost:8000](http://loca
 
 ## Environments
 
+  - **Staging**: [clinicjs.netlify.com](https://clinicjs.netlify.com)
   - **Live**: [clinicjs.org](https://clinicjs.org)
 
-The site is deployed using/to Netlify
+### Staging
+
+Netlify is used to create staging environments using Deploy previews. Every time you create a pull request against `master` you'll find a link to the preview under 'checks'. Find out more [here](https://www.netlify.com/blog/2016/07/20/introducing-deploy-previews-in-netlify/). Technically the staging environment just mirrors live, so use deploy previews to check changes with a sharable URL when creating PRs.
+
+The Netlify website is linked to the NearForm team account. Speak to [Eamonn](eamonn.frisby@nearform.com ) for access.
 
 💡 *To clear the ServiceWorker cache add `?no-cache=1` to the end of any URL when looking at changes.*
 
+### Live
+
+The `master` uses Github Actions to deploy to an AWS bucket automatically. Any PRs merged into `master`
 
 &nbsp;
 
@@ -197,6 +203,18 @@ To place a *GIF-like* video in a markdown file use the following HTML with these
 <video src="/path/to/video.mp4" playsinline loop autoplay muted></video>
 ```
 
+To record your screen and create a video to place in a page you can follow the steps in the video [here](https://drive.google.com/file/d/1GzASKTm6HfOu_C8BiE-yQiIeq-kQgELI/view?usp=sharing).
+
+The steps are as follows:
+
+1. Record your screen with [Nimbus Chrome extension](https://chrome.google.com/webstore/detail/nimbus-screenshot-screen/bpconcjcammlapcogcnnelfmaeghhagj?hl=en)
+2. Convert the saved WEBM as an MP4 with the [Handbrake app](https://handbrake.fr/) and use the 'Web optimised' option when converting
+3. Place your MP4 file in an accessible folder a link to the relative path using the code snippet above.
+
+💡 To convert the video as a GIF, use [ezgif](https://ezgif.com/video-to-gif)*.
+
+*This is not recommended, use an MP4 within the markdown for performance and quality reasons)*
+
 #### Video dimensions
 The dimensions of the videos used within the website currently are as follows:
 
@@ -217,6 +235,22 @@ Dimensions: 1100×758px
 ```
 
 This ensures the video fits wide-screen on desktops with good pixel density when scaled for retina screens and ensures a concise UI presentation across Clinic.js tools..
+
+#### Generating an image from a video frame
+You might want to generate an image from a video for social media/meta data purposes. There are many ways to achieve this, but the most precise and quickest method would be to use `ffmpeg` which is a CLI tool for converting and augmenting videos.
+
+1. Install using Homebrew:
+```bash
+brew install ffmpeg
+```
+
+2. Generate a JPG from an MP4 at a timestamp as follows:
+
+```
+ffmpeg -i INPUT.mp4 -ss 00:00:00 -vframes 1 OUTPUT.jpg
+```
+
+This will generate an image of the first frame of the video in the same dimensions as the source video.
 
 ### Codeblocks
 
@@ -428,6 +462,7 @@ This gives the necessary tool branding to the content with the relevant icon and
 doctor
 bubbleprof
 flame
+heapprofiler
 ```
 
 Look at the [`/src/theme/helpers/tool-attributes.js`](./src/theme/helpers/tool-attributes.js) helper for more insight.
@@ -460,12 +495,36 @@ Used for the internal CTA button link and text to drive users to documentation f
 ### `index.js`
 This is the homepage which is fed with tool, blog and testimonial content using GraphQL and the [`SiteConfig.js`](./data/SiteConfig.js) file.
 
+### `support.js`
+This is the Commercial Support page which is fed with support-package, testimonial and FAQ stub content using GraphQL and the [`SiteConfig.js`](./data/SiteConfig.js) file.
+
 ### `404.js`
 >>>>>>> fix/filenames
 Generic 404 handler. Necessary for in-browser redirects to work when the website is built statically. The copy for the heading and CTA are editable in the [`SiteConfig.js`](./data/SiteConfig.js) file.
 
 ## Stubs
 Stubs live as normal markdown content in the [`/content/stubs`](./content/stubs) directory. A stub is a piece of parsed markdown which is non-indexable (due to `sitemap.xml` exclusion rules) and is used to enhance templates and pages with extra content-editable features. As of writing, stubs only make use of frontmatter to provide content to components within the website.
+
+### Team members
+Team member stubs are used to power the images, names and social media links in the 'The Clinic.js experts' section of the about page.
+
+To update a team member, simply edit the frontmatter in their named markdown file. The options are as follows:
+
+```yml
+# Team member name
+title: Matteo Collina
+
+# Team member image
+image: https://avatars3.githubusercontent.com/u/52195?s=400&v=4
+
+# Links for template buttons
+gitHubUrl: https://github.com/mcollina
+linkedInUrl: https://www.linkedin.com/in/matteocollina
+twitterUrl: https://twitter.com/matteocollina
+
+# Order (lowest number first)
+priority: 1
+```
 
 ### Testimonials
 Testimonial stubs are used to power the quote, author and image used for testimonials as they appear on the homepage and and tool pages. Each testimonial uses the `type` frontmatter key to relate it to the correct tool.
@@ -488,10 +547,49 @@ The options for the `type` key are as follows:
 doctor
 bubbleprof
 flame
+heapprofiler
 clinic
 ```
 
 *The `clinic` option is used for the homepage*
+
+### Support Package
+The Support Package stubs are used to power the contents of the comparison table on the support page. The frontmatter options are below. It is recommended that the `promoted` option is applied to the middle package to honour the design and for visual clarity.
+
+```yml
+# Package title
+title: Enterprise
+
+# List of package features
+features:
+  - Custom solutions to help you reach your goals
+  - Support bundles including other NearForm services
+
+# Image to use in comparison
+image: /assets/images/support-packages/enterprise.svg
+
+# Button text to appear
+buttonText: Contact us to learn more
+
+# Accent colour
+colour: '#825034'
+
+# Ordering
+priority: 1
+```
+
+### FAQ
+FAQ stubs use frontmatter for the title to ensure they are all formatted consistently and priority for ordering, but make use of the the markdown body for the answer in order to provide content editors with enough flexibility to add links and other simple HTML to the answer if applicable.
+
+```yml
+# Heading
+title: What does the Enterprise Tier provide?
+
+# Ordering of FAQs as they appear in the Commercial Support page
+priority: 3
+```
+
+&nbsp;
 
 ## Content trees
 
@@ -575,6 +673,15 @@ tableOfContents: documentationJson {
 
 &nbsp;
 
+## HubSpot
+A HubSpot form is integrated as part of the header CTA and homepage hero inside a modal. The config for this form can be found in the [`SiteConfig.js`](./data/SiteConfig.js) file.
+
+In order for the styling to take effect on the form, ensure the form is rendered rather than embedded by turning the 'Unstyled form' option on in HubSpot.
+
+Talk to **Sean Walsh** for more information about HubSpot.
+
+&nbsp;
+
 ## Fonts
 The fonts used on this website are:
 
@@ -593,6 +700,7 @@ Fonts and the font-face CSS live inside the [`static/assets`](./static/assets) d
 - [node-clinic-flame](https://github.com/clinicjs/node-clinic-flame)
 - [node-clinic-bubbleprof](https://github.com/clinicjs/node-clinic-bubbleprof)
 - [node-clinic-doctor](https://github.com/clinicjs/node-clinic-doctor)
+- [node-clinic-heap-profiler](https://github.com/clinicjs/node-clinic-heap-profiler)
 
 &nbsp;
 

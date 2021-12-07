@@ -24,6 +24,7 @@ export default {
       doctor: '#39D678',
       bubbleprof: '#39BAD6',
       flame: '#FFAA2B',
+      heap: '#A70074',
     }
   },
   font: {

@@ -2,6 +2,7 @@ import React from 'react'
 import IconDoctor from '../components/atoms/Icon/Doctor'
 import IconBubbleprof from '../components/atoms/Icon/Bubbleprof'
 import IconFlame from '../components/atoms/Icon/Flame'
+import IconHeap from '../components/atoms/Icon/Heap'
 import variables from '../variables'
 
 // Map of colours and icons to tool type passed as props to component
@@ -20,6 +21,11 @@ const toolAtributes = [
     type: 'flame',
     Icon: <IconFlame xl />,
     colour: variables.colour.brand.flame
+  },
+  {
+    type: 'heap',
+    Icon: <IconHeap xl />,
+    colour: variables.colour.brand.heap
   }
 ]
 

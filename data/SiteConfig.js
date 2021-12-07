@@ -17,13 +17,19 @@ module.exports = {
   // Username to display in the author segment.
   userName: 'NearFormers',
   // Copyright string for the footer of the website and RSS feed.
-  copyright: 'Copyright © 2021',
+  copyright: 'Copyright © 2019 NearForm',
   // RSS feed icon
   rssImage: '/assets/images/clinic.png',
   // Used for setting manifest color for PWA chrome.
   themeColor: '#0058D5',
   // Used for setting manifest background color.
   backgroundColor: '#ffffff',
+
+  // Hubspot specific config
+  hubSpot: {
+    portalId: '1964953',
+    formId: '159bbb48-dccd-4912-9307-93eee32f8c3d'
+  },
 
   // Page specific content.
   pages: {
