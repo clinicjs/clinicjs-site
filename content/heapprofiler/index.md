@@ -24,7 +24,7 @@ features:
 video: /assets/videos/heapprofiler-screen-recording.mp4
 
 # Links for template buttons
-gitHubUrl: https://github.com/clinicjs/node-clinic-node-clinic-heap-profiler
+gitHubUrl: https://github.com/clinicjs/node-clinic-heap-profiler
 exampleUrl: /assets/html/heapprofiler-example.html
 
 # CTA button for tool template
