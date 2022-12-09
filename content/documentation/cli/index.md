@@ -24,11 +24,7 @@ The `--` denotes the [end of the command and flags](https://nodejs.org/api/cli.h
 
 **1.** `clinic doctor` informs Clinic.js that we wish to use [Clinic.js Doctor](/documentation/doctor/) to get an overview of our application's current performance.
 
-**2.** `node server.js` is the command we use in order to run our Node.js application from the command line as normal. Other ways we might run our application could be via an [NPM script](https://docs.npmjs.com/cli/run-script.html):
-
-```
-clinic doctor -- npm run start
-```
+**2.** `node server.js` is the command we use in order to run our Node.js application from the command line as normal. 
 
 If our application needs some [environment variables](https://nodejs.org/api/cli.html#cli_environment_variables), we can set them beforehand:
 
