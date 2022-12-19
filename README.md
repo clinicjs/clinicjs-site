@@ -78,7 +78,7 @@
 Clone this repo:
 
 ```bash
-git clone https://github.com/clinicjs/clinicjs-website.git
+git clone https://github.com/clinicjs/clinicjs-site.git
 ```
 
 Navigate into the directory and run the following:
@@ -100,7 +100,7 @@ You should now be able to see the website at [http://localhost:8000](http://loca
 
 ### Staging
 
-Netlify is used to create staging environments using Deploy previews. Every time you create a pull request against `master` you'll find a link to the preview under 'checks'. Find out more [here](https://www.netlify.com/blog/2016/07/20/introducing-deploy-previews-in-netlify/). Technically the staging environment just mirrors live, so use deploy previews to check changes with a sharable URL when creating PRs.
+Netlify is used to create staging environments using Deploy previews. Every time you create a pull request against `main` you'll find a link to the preview under 'checks'. Find out more [here](https://www.netlify.com/blog/2016/07/20/introducing-deploy-previews-in-netlify/). Technically the staging environment just mirrors live, so use deploy previews to check changes with a sharable URL when creating PRs.
 
 The Netlify website is linked to the NearForm team account. Speak to [Eamonn](eamonn.frisby@nearform.com ) for access.
 
