@@ -53,6 +53,6 @@ A flamegraph is an aggregated visualization of stacks sampled over time. It prim
 ## Setup
 
 ```bash
-npm install -g clinic
+npm install clinic -g
 clinic flame --help
 ```
