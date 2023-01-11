@@ -31,7 +31,7 @@ We can create a Flame profile with a command that is the same as for Doctor,
 but swapping `flame` in for `doctor`:
 
 ```sh
-clinic flame --on-port 'autocannon localhost:$PORT' -- node slow-io
+clinic flame --on-port 'autocannon localhost:$PORT' -- node slow-event-loop
 ```
 
 Our output looks something like this:
