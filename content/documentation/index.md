@@ -73,7 +73,7 @@ Flags
 **4.** We have a set of example apps on Github. Let's run through the first one using [Clinic.js Doctor](/doctor/) and autocannon:
 
 ```bash
-git clone git@github.com:nearform/node-clinic-doctor-examples.git
+git clone https://github.com/clinicjs/node-clinic-doctor-examples.git
 cd node-clinic-doctor-examples
 npm install
 clinic doctor --autocannon [ / ] -- node ./slow-io
