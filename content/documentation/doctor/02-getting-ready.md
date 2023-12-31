@@ -18,7 +18,7 @@ contains several for us to explore. Let's run the following to clone the reposit
 and install its dependencies:
 
 ```bash
-git clone git@github.com:nearform/node-clinic-doctor-examples.git
+git clone https://github.com/clinicjs/node-clinic-doctor-examples.git
 cd node-clinic-doctor-examples
 npm install
 ```
