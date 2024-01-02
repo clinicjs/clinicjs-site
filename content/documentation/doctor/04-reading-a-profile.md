@@ -167,6 +167,24 @@ even take another reading.
 This is clearly not healthy - and Doctor has flagged it as such, colouring this graph
 red and pointing to it in the Alert box.
 
+#### Event Loop Utilization %
+
+This graph shows what percentage of the Node.js Event Loop was being used by the process being profiled at any one point in time.
+
+![Event Loop Utilization graph](04-R.png)
+
+Event Loop Utilization (ELU) is a critical metric in Node.js environments, providing a more precise understanding of the event loop's efficiency and the application's performance. It measures the ratio of the event loop's busy time to its idle time, offering insights into the application's performance beyond traditional CPU metrics. CPU utilization can be misleading. A Node.js process might not use 100% of a CPU, not because it's efficient, but because it's waiting on I/O or other asynchronous operations. This waiting time can lead to underestimation of the process's actual load.
+
+Before ELU, metrics like event loop delay (the time difference between when an event was scheduled to be executed and when it was actually executed) were used. However, this metric doesn't account for the time the event loop was idle or the application's scalability.
+
+ELU helps in pinpointing performance bottlenecks. A high ELU value indicates that the event loop is busy, which might lead to slower request handling and reduced throughput. Understanding this can guide optimizations, such as code refactoring or load balancing. An unexpected rise in ELU can signal issues that wouldn't necessarily be caught by other metrics, such as inefficient code or resource leaks.
+
+If there is an issue with the Event Loop Utilization, a warning of type Event Loop will be triggered. 
+
+For further reading regarding the Event Loop Utilization we can refer to the [Introduction to Event Loop Utilization in Node.js
+](https://nodesource.com/blog/event-loop-utilization-nodejs).
+
+
 #### Active Handles
 
 This graph shows the quantity of I/O handles presently active, awaiting an output.
