@@ -9,7 +9,7 @@ metaData:
 
 Before you get started with Clinic.js, first let's make sure we install it on our machines and run a couple of tests just to make sure everything is working fine. Let's follow these steps to kick off:
 
-**1.** Note: You must use a version of Node.js `>= 8.11.1`
+**1.** Note: You must use a version of Node.js `>= 16`
 
 ```bash
 npm install -g clinic
